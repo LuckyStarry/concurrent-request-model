@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Concurrent.Fx.Adapter&lt;TResult&gt;">
+    <Position X="8" Y="10.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Adapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Concurrent.Fx.Agent&lt;TResult&gt;">
+    <Position X="4.75" Y="5.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAEAAAAAgACAAAAAAQAAAAAAAAgA=</HashCode>
+      <FileName>Agent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Concurrent.Fx.Command" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAARQAAAAEAAAAAAAAAAAAAAAAACAAAEA=</HashCode>
+      <FileName>Command.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Concurrent.Fx.Commands" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Commands.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Concurrent.Fx.CommandsBuilder" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandsBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Logger" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Payload" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Payload.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Records" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Records.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Result">
+    <Position X="4" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAACAAAAABAIAAAAAA=</HashCode>
+      <FileName>Result.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Bar.BarAdapter">
+    <Position X="8.25" Y="12.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Bar\BarAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Bar.BarAgent">
+    <Position X="8.5" Y="8.25" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Biz\Bar\BarAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Bar.BarRecord" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Biz\Bar\BarRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Bar.BarResult">
+    <Position X="7.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Bar\BarResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Baz.BazAdapter">
+    <Position X="1.75" Y="12.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Baz\BazAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Baz.BazAgent">
+    <Position X="5" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Biz\Baz\BazAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Baz.BazRecord" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Biz\Baz\BazRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Baz.BazResult">
+    <Position X="4.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Baz\BazResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.FakeRequest" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\FakeRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Foo.FooAdapter">
+    <Position X="14.75" Y="12.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Foo\FooAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Foo.FooAgent">
+    <Position X="1.5" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Biz\Foo\FooAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Foo.FooRecord" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Biz\Foo\FooRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Foo.FooResult">
+    <Position X="1.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Foo\FooResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Concurrent.Fx.Biz.Qux.QuxRecord" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Biz\Qux\QuxRecord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Concurrent.Fx.IAdapter">
+    <Position X="13" Y="0.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Concurrent.Fx.IAdapter&lt;TResult&gt;">
+    <Position X="13" Y="2.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Concurrent.Fx.IAgent" Collapsed="true">
+    <Position X="21.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>IAgent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Concurrent.Fx.ICommand" Collapsed="true">
+    <Position X="23.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Concurrent.Fx.IResult" Collapsed="true">
+    <Position X="25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAACAAAAABAIAAAAAA=</HashCode>
+      <FileName>IResult.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
