@@ -12,7 +12,12 @@ namespace Concurrent.Fx
         public abstract IResult<TModel> Send(TPayload payload);
         public virtual async Task<IResult<TModel>> SendAsync(TPayload payload, CancellationToken cancellationToken)
         {
-            return await Task.Run(() => this.Send(payload), cancellationToken);
+            return await Task.Run(() =>
+            {
+                var task = Task.Run(() => this.Send(payload), cancellationToken);
+                task.Wait(cancellationToken);
+                return task.Result;
+            });
         }
     }
 }
