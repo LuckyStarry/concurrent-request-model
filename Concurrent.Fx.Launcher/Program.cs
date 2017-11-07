@@ -19,20 +19,20 @@ namespace Concurrent.Fx
             try
             {
                 //Register Type
-                CommandFactory.Register(CMD_FOO, new Biz.Foo.FooAgent());
-                CommandFactory.Register(CMD_BAR, new Biz.Bar.BarAgent());
-                CommandFactory.Register(CMD_BAZ, new Biz.Baz.BazAgent());
+                Biz.BizCommandFactory.Instance.Register(CMD_FOO, new Biz.Foo.FooAgent());
+                Biz.BizCommandFactory.Instance.Register(CMD_BAR, new Biz.Bar.BarAgent());
+                Biz.BizCommandFactory.Instance.Register(CMD_BAZ, new Biz.Baz.BazAgent());
 
                 //Composite Commands
                 var invoker = new Invoker();
-                var payload = new Payload();
+                var context = new Biz.BizContext();
                 var commands = new string[] { CMD_FOO, CMD_BAR, CMD_BAZ };
                 // Run synchronously
                 //   invoker.Execute(payload, commands);
 
                 // Run asynchronously
                 var cancelcancelTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(3));
-                var records = invoker.ExecuteAsync(payload, cancelcancelTokenSource.Token, commands).Result;
+                var records = invoker.ExecuteAsync(context, cancelcancelTokenSource.Token, commands).Result;
 
                 Logger.Record("Invoke Success");
                 Logger.Record(JsonConvert.SerializeObject(records));

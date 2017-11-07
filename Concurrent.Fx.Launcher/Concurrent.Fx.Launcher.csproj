@@ -45,10 +45,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandFactory.cs" />
+    <Compile Include="Biz\Bar\BarAgent.cs" />
+    <Compile Include="Biz\Baz\BazAgent.cs" />
+    <Compile Include="Biz\BizAgent.cs" />
+    <Compile Include="Biz\BizCommand.cs" />
+    <Compile Include="Biz\BizCommandBuilder.cs" />
+    <Compile Include="Biz\BizCommandFactory.cs" />
+    <Compile Include="Biz\BizContext.cs" />
+    <Compile Include="Biz\BizModel.cs" />
+    <Compile Include="Biz\BizModelSorter.cs" />
+    <Compile Include="Biz\BizPayload.cs" />
+    <Compile Include="Biz\BizResult.cs" />
+    <Compile Include="Biz\FakeRequest.cs" />
+    <Compile Include="Biz\Foo\FooAgent.cs" />
+    <Compile Include="Biz\Qux\QuxRecord.cs" />
+    <Compile Include="IModelSorter.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="IResponseBuilder.cs" />
+    <Compile Include="ResponseBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

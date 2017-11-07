@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Concurrent.Fx
 {
-    public interface IAgent
+    public interface IAgent<TPayload, TModel>
     {
-        IResult Send(Payload payload);
-        Task<IResult> SendAsync(Payload payload, CancellationToken cancellationToken);
-
-        IAdapter GetAdapter();
+        IResult<TModel> Send(TPayload payload);
+        Task<IResult<TModel>> SendAsync(TPayload payload, CancellationToken cancellationToken);
     }
 }

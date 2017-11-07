@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Concurrent.Fx
+namespace Concurrent.Fx.Biz
 {
-    public class Payload
+    public class BizModel
     {
-        // You can append request parameter(s) here
     }
 }

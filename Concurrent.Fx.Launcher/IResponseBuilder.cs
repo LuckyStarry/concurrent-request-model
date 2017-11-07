@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Concurrent.Fx.Biz.Foo
+namespace Concurrent.Fx
 {
-    public class FooRecord
+    public interface IResponseBuilder
     {
-        public string Message { set; get; }
+        Response Build();
     }
 }

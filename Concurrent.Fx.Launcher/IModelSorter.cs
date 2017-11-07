@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Concurrent.Fx.Biz.Bar
+namespace Concurrent.Fx
 {
-    public class BarRecord
+    public interface IModelSorter<T>
     {
-        public string Message { set; get; }
+        IEnumerable<T> Sort(IEnumerable<T> original);
     }
 }

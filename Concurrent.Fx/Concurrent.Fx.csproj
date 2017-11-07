@@ -40,34 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapter.cs" />
-    <Compile Include="Biz\Bar\BarAdapter.cs" />
-    <Compile Include="Biz\Bar\BarAgent.cs" />
-    <Compile Include="Biz\Bar\BarRecord.cs" />
-    <Compile Include="Biz\Bar\BarResult.cs" />
-    <Compile Include="Biz\Baz\BazAdapter.cs" />
-    <Compile Include="Biz\Baz\BazAgent.cs" />
-    <Compile Include="Biz\Baz\BazRecord.cs" />
-    <Compile Include="Biz\Baz\BazResult.cs" />
-    <Compile Include="Biz\FakeRequest.cs" />
-    <Compile Include="Biz\Foo\FooAdapter.cs" />
-    <Compile Include="Biz\Foo\FooAgent.cs" />
-    <Compile Include="Biz\Foo\FooRecord.cs" />
-    <Compile Include="Biz\Foo\FooResult.cs" />
-    <Compile Include="Biz\Qux\QuxRecord.cs" />
-    <Compile Include="Commands.cs" />
-    <Compile Include="CommandsBuilder.cs" />
-    <Compile Include="IAdapter.cs" />
     <Compile Include="Agent.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Executer.cs" />
     <Compile Include="IAgent.cs" />
     <Compile Include="ICommand.cs" />
+    <Compile Include="ICommandBuilder.cs" />
+    <Compile Include="IExecuter.cs" />
     <Compile Include="IResult.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="Payload.cs" />
+    <Compile Include="IContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Records.cs" />
-    <Compile Include="Result.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Concurrent.Fx.cd" />

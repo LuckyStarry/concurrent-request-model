@@ -7,60 +7,46 @@ using System.Threading.Tasks;
 
 namespace Concurrent.Fx
 {
-    public class Command : ICommand
+    public class Command<TPayload, TModel> : ICommand
     {
-        private readonly IAgent agent;
-        private readonly Payload payload;
-        private readonly Records records;
+        private readonly IAgent<TPayload, TModel> agent;
+        private readonly IContext<TPayload, TModel> context;
+        private readonly string name;
 
-        public Command(IAgent agent, Payload payload, Records records)
+        public Command(IAgent<TPayload, TModel> agent, IContext<TPayload, TModel> context, string name)
         {
             this.agent = agent;
-            this.payload = payload;
-            this.records = records;
+            this.context = context;
+            this.name = name;
         }
 
         public void Execute()
         {
-            Logger.Record($"Agent [{ this.agent.GetType() }] Begin");
             try
             {
-                this.FillRecords(this.agent.Send(this.payload));
-                Logger.Record($"Agent [{ this.agent.GetType() }] Success");
+                var result = this.agent.Send(this.context.Payload);
+                this.context.Lists[this.name] = result.GetRecords();
             }
             catch (Exception exception)
             {
-                var adapter = this.agent.GetAdapter();
-                this.FillRecords(adapter.CreateExceptionResult(exception));
-                Logger.Record($"Agent [{ this.agent.GetType() }] Exception { exception.Message }");
+                this.context.Exceptions[this.name] = exception;
             }
         }
 
         public async Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            Logger.Record($"Agent [{ this.agent.GetType() }] Begin");
             try
             {
-                this.FillRecords(await this.agent.SendAsync(this.payload, cancellationToken));
-                Logger.Record($"Agent [{ this.agent.GetType() }] Success");
-            }
-            catch (OperationCanceledException operationCanceledException)
-            {
-                var adapter = this.agent.GetAdapter();
-                this.FillRecords(adapter.CreateOperationCanceledResult(operationCanceledException));
-                Logger.Record($"Agent [{ this.agent.GetType() }] Canceled { operationCanceledException.Message }");
+                Logger.Record($"Command [{ this.name }] Executing");
+                var result = await this.agent.SendAsync(this.context.Payload, cancellationToken);
+                Logger.Record($"Command [{ this.name }] Executed");
+                this.context.Lists[this.name] = result.GetRecords();
             }
             catch (Exception exception)
             {
-                var adapter = this.agent.GetAdapter();
-                this.FillRecords(adapter.CreateExceptionResult(exception));
-                Logger.Record($"Agent [{ this.agent.GetType() }] Exception { exception.Message }");
+                Logger.Record($"Command [{ this.name }] Exception: { exception.Message }");
+                this.context.Exceptions[this.name] = exception;
             }
-        }
-
-        private void FillRecords(IResult result)
-        {
-            result.Fill(this.records);
         }
     }
 }

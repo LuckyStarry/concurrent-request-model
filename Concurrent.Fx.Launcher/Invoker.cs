@@ -9,30 +9,32 @@ namespace Concurrent.Fx
 {
     public class Invoker
     {
-        private Commands CreateCommands(Payload payload, Records records, params string[] commandNames)
+        public Response Execute(Biz.BizContext context, string[] names)
         {
-            var builder = new CommandsBuilder();
-            foreach (var commandName in commandNames?.Distinct())
+            var builder = new Biz.BizCommandBuilder(context, Biz.BizCommandFactory.Instance);
+            foreach (var name in names)
             {
-                builder.Add(CommandFactory.Create(commandName, payload, records));
+                builder.Add(name);
             }
-            return builder.Build();
+            var engine = new Engine();
+            engine.Execute(builder);
+
+            var response = new ResponseBuilder(context);
+            return response.Build();
         }
 
-        public Records Execute(Payload payload, params string[] commandNames)
+        public async Task<Response> ExecuteAsync(Biz.BizContext context, CancellationToken cancellationToken, string[] names)
         {
-            var records = new Records();
-            var commands = this.CreateCommands(payload, records, commandNames);
-            commands.Execute();
-            return records;
-        }
+            var builder = new Biz.BizCommandBuilder(context, Biz.BizCommandFactory.Instance);
+            foreach (var name in names)
+            {
+                builder.Add(name);
+            }
+            var engine = new Engine();
+            await engine.ExecuteAsync(builder, cancellationToken);
 
-        public async Task<Records> ExecuteAsync(Payload payload, CancellationToken cancellationToken, params string[] commandNames)
-        {
-            var records = new Records();
-            var commands = this.CreateCommands(payload, records, commandNames);
-            await commands.ExecuteAsync(cancellationToken);
-            return records;
+            var response = new ResponseBuilder(context);
+            return response.Build();
         }
     }
 }

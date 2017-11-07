@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Concurrent.Fx.Biz.Baz
+namespace Concurrent.Fx
 {
-    public class BazRecord
+    public class Response
     {
-        public string Message { set; get; }
+        public IEnumerable<Biz.BizModel> Models { set; get; }
     }
 }
